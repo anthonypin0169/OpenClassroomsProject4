@@ -1,0 +1,307 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto;
+}
+
+header {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+header .header-logo {
+  width: 197px;
+  height: 36px;
+  margin: 14px 0 13px 0;
+}
+
+.location-section {
+  position: relative;
+  z-index: 5;
+  background: #EAEAEA;
+  color: #353535;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  height: 50px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.reservation-section {
+  text-align: center;
+  background: #F6F6F6;
+  padding: 39px 0 57px 0;
+}
+.reservation-section__title {
+  margin: 0 58px 10px 42px;
+}
+.reservation-section__txt {
+  color: #353535;
+  margin: 0 26px 27px 34px;
+}
+.reservation-section__btn {
+  height: 50px;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  border-radius: 25px;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  color: #FFFFFF;
+  width: 218px;
+  transition: opacity 350ms ease-in;
+}
+.reservation-section__btn:hover {
+  opacity: 0.8;
+}
+
+.functioning-section {
+  padding-top: 48px;
+  padding-bottom: 68px;
+}
+.functioning-section__title {
+  margin: 0 0 26px 20px;
+}
+.functioning-section__total-functioning-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.functioning-section__total-functioning-step .functioning__step {
+  width: 322.49px;
+  height: 72.38px;
+  background: #F6F6F6;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  display: inline-flex;
+  align-items: center;
+}
+.functioning-section__total-functioning-step .functioning__step--num {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #9356DC;
+  color: white;
+  text-align: center;
+  align-content: center;
+  position: relative;
+  right: 12px;
+}
+.functioning-section__total-functioning-step .functioning__step--icon {
+  color: #7E7E7E;
+}
+.functioning-section__total-functioning-step .functioning__step--btn {
+  border: none;
+  background: #F6F6F6;
+}
+.functioning-section__total-functioning-step .fa-mobile-screen-button {
+  margin: 0 27px 0 21.98px;
+}
+.functioning-section__total-functioning-step .fa-list-ul {
+  margin: 0 23px;
+}
+.functioning-section__total-functioning-step .fa-store {
+  color: #9356DC;
+  margin: 0 20px 0 24px;
+}
+
+.restaurant-section {
+  background: #F6F6F6;
+  padding-bottom: 66px;
+}
+.restaurant-section__title {
+  padding: 54px 0 0 0;
+  margin: 0 0 26px 20px;
+}
+.restaurant-section__total-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+}
+
+.restaurant-section__card-link {
+  text-decoration: none;
+  color: black;
+}
+
+.restaurant-card {
+  height: 241px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 340px;
+  overflow: hidden;
+}
+.restaurant-card__new-card {
+  position: absolute;
+  z-index: 1;
+  height: 29px;
+  width: 80px;
+  border-radius: 2px;
+  color: #008766;
+  background: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 14px 0 0 247px;
+}
+.restaurant-card__photo {
+  width: 100%;
+  height: 231px;
+  position: relative;
+  bottom: 57px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 0;
+}
+.restaurant-card__content {
+  padding-left: 12px;
+  position: relative;
+  bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.restaurant-card__content__content-bloc {
+  margin: 12px 0 13px 16px;
+}
+.restaurant-card__content--icon {
+  margin-right: 23px;
+  cursor: pointer;
+}
+.restaurant-card__content--icon:hover {
+  color: #9356DC;
+  font-weight: 800;
+}
+
+footer {
+  background: #353535;
+  padding: 22px 0;
+}
+footer .footer__title {
+  color: white;
+  margin: 0 0 16px 25px;
+  font-family: Shrikhand;
+}
+footer .footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+footer .footer__list--link {
+  list-style-type: none;
+}
+footer .footer__list--link .footer-link-icon {
+  margin: 0 11px 0 25px;
+  color: white;
+}
+footer .footer__list--link .footer-link-a {
+  text-decoration: none;
+  color: white;
+}
+footer .footer__list .footer-link-2 {
+  margin-left: 25px;
+}
+
+@media (min-width: 768px) {
+  header {
+    height: 96px;
+    box-shadow: none;
+    align-items: center;
+  }
+  .location-section {
+    box-shadow: none;
+  }
+  .reservation-section {
+    padding: 30px 0;
+  }
+  .restaurant-section__title {
+    padding-top: 30px;
+  }
+  .restaurant-section__total-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 1024px) {
+  .functioning-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .functioning-section__total-functioning-step {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 1053px;
+    gap: 40px;
+  }
+  .functioning-section__title {
+    align-self: flex-start;
+    margin-left: 180px;
+  }
+  .restaurant-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0;
+  }
+  .restaurant-section__total-card {
+    max-width: 1080px;
+    justify-content: space-between;
+  }
+  .restaurant-section__total-card .restaurant-card {
+    width: 490px;
+    margin-bottom: 50px;
+  }
+  .restaurant-section__total-card .restaurant-card__new-card {
+    margin-left: 392px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  }
+  .restaurant-section__title {
+    align-self: flex-start;
+    margin-left: 180px;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    height: 114px;
+    margin: 0;
+    padding: 0;
+  }
+  footer .footer__title {
+    color: white;
+    margin: 0 50px 30px 75px;
+  }
+  footer .footer__list {
+    display: flex;
+    flex-direction: row;
+    width: 661px;
+    margin: 0 0 30px 0;
+    gap: 12px;
+  }
+  footer .footer__list--link {
+    list-style-type: none;
+  }
+  footer .footer__list--link .footer-link-icon {
+    margin: 0 11px 0 0;
+  }
+  footer .footer__list .footer-link-2 {
+    margin-left: 0;
+  }
+  footer .footer__list .footer-link-1 {
+    margin-right: 25px;
+  }
+}/*# sourceMappingURL=style.css.map */
