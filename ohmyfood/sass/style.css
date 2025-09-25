@@ -51,6 +51,7 @@ header .header-logo {
 .reservation-section__btn {
   height: 50px;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  color: #F6F6F6;
   border-radius: 25px;
   border: none;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);

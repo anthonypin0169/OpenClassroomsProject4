@@ -28,6 +28,7 @@ $card-shadow:0 4px 15px rgba(0, 0, 0, 0.10);
 @mixin order-explore-btn{
     height: 50px;
     background: $linear-gradient;
+    color: #F6F6F6;
     border-radius: 25px;
     border: none;
     box-shadow: $light-shadow;

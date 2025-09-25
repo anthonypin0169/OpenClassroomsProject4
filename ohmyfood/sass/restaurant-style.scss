@@ -1,0 +1,277 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$light-purple:#9356DC;
+$pink:#FF79DA;
+$linear-gradient: linear-gradient(to bottom right, $pink,$light-purple);
+$green:#008766;
+$light-green:#99E2D0;
+$light-grey:#F6F6F6;
+$grey:#EAEAEA;
+$dark-grey:#353535;
+$light-shadow:0 4px 10px rgba(0, 0, 0, 0.25);
+$shadow:0 4px 15px rgba(0, 0, 0, 0.15);
+$header-short-shadow:0 2px 4px rgba(0, 0, 0, 0.15);
+$header-dark-shadow:0 4px 4px rgba(0, 0, 0, 0.25);
+$card-shadow:0 4px 15px rgba(0, 0, 0, 0.10);
+
+@mixin order-explore-btn{
+    height: 50px;
+    background: $linear-gradient;
+    color: #F6F6F6;
+    border-radius: 25px;
+    border: none;
+    box-shadow: $light-shadow;
+}
+@mixin restaurant-card-global-values{
+    height: 241px;
+    border-radius: 15px;
+    box-shadow: $card-shadow;
+}
+@mixin dishes-card-global-values{
+    height: 69px;
+    border-radius: 15px;
+    box-shadow: $card-shadow;
+    gap: 5px;
+    background: #F6F6F6;
+}
+body{
+    font-family: Roboto;
+}
+//Header
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 63px;
+    box-shadow: $header-short-shadow;
+    .header__logo{
+        width: 197px;
+        height: 36px;
+    }
+    .header__back-btn{
+        color: black;
+        width: 17.2px;
+        height: 16px;
+        position: absolute;
+        left: 23px;
+    }
+}
+//After-header-img
+.after-header-img{
+    height: 275px;
+    width: 100%;
+    object-fit: cover;
+}
+//Menu-section
+.menu-section{
+    max-width: 1055px;
+    border-radius: 25px 25px 0 0;
+    background: $light-grey;
+    padding-top: 30px;
+    margin-top: -60px;
+    position: relative;
+    
+    &__group{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &--title{
+            margin-left: 17px;
+            font-family: shrikhand;
+        }
+        &--icon{
+            margin-right: 41px;
+            cursor: pointer;
+            &:hover{
+                color: $light-purple;
+                font-weight: 800;
+            }
+        }
+    }
+    .restaurant-total-card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 1055px;
+        width: 100%;
+        padding: 0 13px 0 13px;
+        .total-menu{
+            max-width: 634px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            .order-btn-menu{
+                @include order-explore-btn;
+                width: 186px;
+                margin: 30px 0 40px 0;
+                transition: opacity 350ms ease-in;
+                    &:hover{
+                        opacity: 0.8;
+                    }   
+                }
+        }
+        .menu__title{
+            height: 27px;
+            margin: 40px 0 0 20px;
+            align-self: flex-start;
+        }
+        .menu__title::after{
+            content:"";
+            display: block;
+            height: 2px;
+            width: 40px;
+            background: $light-green;
+        }
+    }
+}
+
+//Cards-menu
+.card-menu{
+    width: 100%;
+    max-width: 634px;
+    height: 72px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    &__content{
+        margin-left: 12px;
+        min-width: 0;
+        flex: 1;
+        white-space: nowrap;//
+        overflow: hidden;//
+        text-overflow: ellipsis;//
+        p{
+            font-size: 15px;
+        }
+    }
+    &__price{
+        display: flex;
+        position: relative;
+        margin: 0 12px 12px 0;
+        top: 15px;
+        font-size: 15px;
+        transition: transform 400ms ease-in-out;
+        }
+    &__btn{
+        width: 59px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        background: $light-green;
+        border-radius: 0 15px 15px 0;
+        border: none;
+        cursor: pointer;
+        transition: transform 400ms ease-in-out;
+        .fa-circle-check{
+            color: white;
+        }
+    }
+    &:hover{
+        .card-menu__price, .card-menu__btn{    
+            transform: translateX(-59px);
+        }    
+    }       
+}
+
+//Footer
+footer{
+    background: $dark-grey;
+    padding: 22px 0;
+    .footer__title{
+        color: white;
+        margin: 0 0 16px 25px;
+        font-family: Shrikhand;
+    }
+    .footer__list{
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        &--link{
+            list-style-type: none;
+            .footer-link-icon{
+                margin: 0 11px 0 25px;
+                color: white;  
+            }
+            .footer-link-a{
+                text-decoration: none;
+                color: white;  
+            }
+        }
+        .footer-link-2{
+            margin-left: 25px;     
+        }
+    }
+}
+
+//Responsive
+@media (min-width:768px){
+
+    //Header
+    header{
+        height: 96px;
+    }
+    //After-header-img
+    .after-header-img{
+        height: 383px;
+    }
+    //Footer
+    footer{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    height: 114px;
+    margin: 0;
+    padding: 0;
+        .footer__title{
+            color: white;
+            margin: 0 50px 30px 75px;   
+        }
+        .footer__list{
+            display: flex;
+            flex-direction: row;
+            width: 661px;
+            margin: 0 0 30px 25px;
+            gap: 12px;
+            &--link{
+                list-style-type: none;
+                .footer-link-icon{
+                    margin: 0 11px 0 0;
+                }
+            }
+            .footer-link-2{
+                margin-left: 0;     
+            }
+            .footer-link-1{
+                margin-right: 25px;
+            }
+        }
+    }
+}
+
+@media (min-width:1024px){
+
+    //Menu-section
+    .menu-section{
+        margin: auto;
+        margin-top: -60px;
+        padding-top: 50px;
+        &__group{
+            justify-content: center;
+            gap: 24px;
+        }
+    }
+}
