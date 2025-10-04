@@ -8,6 +8,8 @@
 
 body {
   font-family: Roboto;
+  position: relative;
+  z-index: 0;
 }
 
 header {
@@ -57,6 +59,7 @@ header .header-logo {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   color: #FFFFFF;
   width: 218px;
+  cursor: pointer;
   transition: opacity 350ms ease-in;
 }
 .reservation-section__btn:hover {
@@ -66,6 +69,7 @@ header .header-logo {
 .functioning-section {
   padding-top: 48px;
   padding-bottom: 68px;
+  background: white;
 }
 .functioning-section__title {
   margin: 0 0 26px 20px;
@@ -85,6 +89,7 @@ header .header-logo {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   display: inline-flex;
   align-items: center;
+  cursor: pointer;
 }
 .functioning-section__total-functioning-step .functioning__step--num {
   width: 24px;
@@ -103,6 +108,7 @@ header .header-logo {
 .functioning-section__total-functioning-step .functioning__step--btn {
   border: none;
   background: #F6F6F6;
+  cursor: pointer;
 }
 .functioning-section__total-functioning-step .fa-mobile-screen-button {
   margin: 0 27px 0 21.98px;
@@ -249,8 +255,10 @@ footer .footer__list .footer-link-2 {
     gap: 40px;
   }
   .functioning-section__title {
-    align-self: flex-start;
-    margin-left: 180px;
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    width: 100%;
   }
   .restaurant-section {
     display: flex;
@@ -271,8 +279,10 @@ footer .footer__list .footer-link-2 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   }
   .restaurant-section__title {
-    align-self: flex-start;
-    margin-left: 180px;
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    width: 100%;
   }
   footer {
     display: flex;
@@ -304,5 +314,168 @@ footer .footer__list .footer-link-2 {
   }
   footer .footer__list .footer-link-1 {
     margin-right: 25px;
+  }
+}
+.anim-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 2000px;
+  gap: 15px;
+  background: white;
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  animation: transparence 1500ms forwards cubic-bezier(1, -0.01, 1, -0.01);
+}
+.anim-container__logo {
+  width: 180px;
+  height: 40px;
+}
+.anim-container__rectange {
+  width: 90%;
+  max-width: 350px;
+  height: 45px;
+  border: 2px solid #008766;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  align-items: end;
+  overflow: hidden;
+  gap: 10px;
+  position: relative;
+}
+.anim-container__rectange--bloc {
+  height: 36px;
+  width: 20px;
+  justify-self: center;
+  position: relative;
+  right: 35px;
+  margin-bottom: 3px;
+  background: #99E2D0;
+  border: 1px solid #008766;
+  opacity: 0;
+  transform: skewX(-45deg);
+  animation: load 400ms forwards cubic-bezier(0.71, 0.35, 0.68, 0.56);
+}
+
+@keyframes transparence {
+  0% {
+    z-index: 20;
+  }
+  100% {
+    z-index: -1;
+  }
+}
+@keyframes load {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.bloc-1 {
+  animation-delay: 160ms;
+}
+
+.bloc-2 {
+  animation-delay: 200ms;
+}
+
+.bloc-3 {
+  animation-delay: 240ms;
+}
+
+.bloc-4 {
+  animation-delay: 280ms;
+}
+
+.bloc-5 {
+  animation-delay: 320ms;
+}
+
+.bloc-6 {
+  animation-delay: 360ms;
+}
+
+.bloc-7 {
+  animation-delay: 400ms;
+}
+
+.bloc-8 {
+  animation-delay: 440ms;
+}
+
+.bloc-9 {
+  animation-delay: 480ms;
+}
+
+.bloc-10 {
+  animation-delay: 520ms;
+}
+
+.bloc-11 {
+  animation-delay: 560ms;
+}
+
+.bloc-12 {
+  animation-delay: 600ms;
+}
+
+.bloc-13 {
+  animation-delay: 640ms;
+}
+
+.bloc-14 {
+  animation-delay: 680ms;
+}
+
+.bloc-15 {
+  animation-delay: 720ms;
+}
+
+@media (min-width: 768px) {
+  .anim-container {
+    gap: 15px;
+  }
+  .anim-container__logo {
+    width: 220px;
+    height: 45px;
+  }
+  .anim-container__rectange {
+    max-width: 500px;
+    height: 50px;
+    border: 3px solid #008766;
+    gap: 12px;
+  }
+  .anim-container__rectange--bloc {
+    height: 39px;
+    width: 25px;
+    margin-bottom: 3px;
+    background: #99E2D0;
+  }
+}
+@media (min-width: 1024px) {
+  .anim-container {
+    gap: 15px;
+  }
+  .anim-container__logo {
+    width: 260px;
+    height: 50px;
+  }
+  .anim-container__rectange {
+    max-width: 580px;
+    height: 60px;
+    gap: 15px;
+  }
+  .anim-container__rectange--bloc {
+    height: 48px;
+    width: 28px;
+    margin-bottom: 4px;
   }
 }/*# sourceMappingURL=style.css.map */

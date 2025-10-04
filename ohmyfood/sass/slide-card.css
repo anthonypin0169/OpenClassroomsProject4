@@ -1,0 +1,134 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto;
+  width: 375px;
+  margin: 0 auto;
+  margin-top: 200px;
+}
+
+.restaurant-total-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1055px;
+  width: 100%;
+  padding: 0 13px 0 13px;
+  background: rgba(128, 128, 128, 0.121);
+  overflow: hidden;
+}
+.restaurant-total-card .total-menu {
+  max-width: 634px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.restaurant-total-card .total-menu .order-btn-menu {
+  height: 50px;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  color: #F6F6F6;
+  border-radius: 25px;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  width: 186px;
+  margin: 30px 0 40px 0;
+  transition: opacity 350ms ease-in;
+}
+.restaurant-total-card .total-menu .order-btn-menu:hover {
+  opacity: 0.8;
+}
+.restaurant-total-card .menu__title {
+  height: 27px;
+  margin: 40px 0 0 20px;
+  align-self: flex-start;
+}
+.restaurant-total-card .menu__title::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 40px;
+  background: #99E2D0;
+}
+
+.card-menu {
+  width: 349px;
+  height: 72px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  padding-right: 0px;
+  opacity: 0;
+  transition: padding-right 400ms ease-in-out;
+  gap: 15px;
+  animation: slide 500ms forwards cubic-bezier(0.71, 0.35, 0.68, 0.56);
+}
+.card-menu__content {
+  margin-left: 12px;
+  min-width: 0;
+}
+.card-menu__content p, .card-menu__content h3 {
+  font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.card-menu__price {
+  display: flex;
+  position: relative;
+  margin: 0 12px 12px 0;
+  top: 15px;
+  font-size: 15px;
+  transition: transform 400ms ease-in-out;
+}
+.card-menu__btn {
+  width: 59px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  background: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  border: none;
+  transition: transform 400ms ease-in-out;
+}
+.card-menu__btn .fa-circle-check {
+  color: white;
+}
+.card-menu:hover {
+  padding-right: 59px;
+}
+.card-menu:hover .card-menu__btn {
+  transform: translateX(-59px);
+}
+
+@keyframes slide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.anim-card-1 {
+  animation-delay: 100ms;
+}
+
+.anim-card-2 {
+  animation-delay: 250ms;
+}
+
+.anim-card-3 {
+  animation-delay: 400ms;
+}/*# sourceMappingURL=slide-card.css.map */

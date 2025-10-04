@@ -68,6 +68,7 @@ header .header__back-btn {
   max-width: 1055px;
   width: 100%;
   padding: 0 13px 0 13px;
+  cursor: pointer;
 }
 .menu-section .restaurant-total-card .total-menu {
   max-width: 634px;
@@ -86,6 +87,7 @@ header .header__back-btn {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   width: 186px;
   margin: 30px 0 40px 0;
+  cursor: pointer;
   transition: opacity 350ms ease-in;
 }
 .menu-section .restaurant-total-card .total-menu .order-btn-menu:hover {
@@ -105,8 +107,7 @@ header .header__back-btn {
 }
 
 .card-menu {
-  width: 100%;
-  max-width: 634px;
+  width: 349px;
   height: 72px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 15px;
@@ -115,18 +116,20 @@ header .header__back-btn {
   justify-content: space-between;
   position: relative;
   overflow: hidden;
-  cursor: pointer;
+  padding-right: 0px;
+  transition: padding-right 400ms ease-in-out;
+  gap: 15px;
+  animation: slide 500ms forwards cubic-bezier(0.71, 0.35, 0.68, 0.56);
 }
 .card-menu__content {
   margin-left: 12px;
   min-width: 0;
-  flex: 1;
-  white-space: nowrap;
+}
+.card-menu__content p, .card-menu__content h3 {
+  font-size: 15px;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-.card-menu__content p {
-  font-size: 15px;
+  white-space: nowrap;
 }
 .card-menu__price {
   display: flex;
@@ -145,14 +148,64 @@ header .header__back-btn {
   background: #99E2D0;
   border-radius: 0 15px 15px 0;
   border: none;
-  cursor: pointer;
   transition: transform 400ms ease-in-out;
 }
 .card-menu__btn .fa-circle-check {
   color: white;
 }
-.card-menu:hover .card-menu__price, .card-menu:hover .card-menu__btn {
+.card-menu:hover {
+  padding-right: 59px;
+}
+.card-menu:hover .card-menu__btn {
   transform: translateX(-59px);
+}
+
+@keyframes slide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.anim-card-1 {
+  animation-delay: 100ms;
+}
+
+.anim-card-2 {
+  animation-delay: 150ms;
+}
+
+.anim-card-3 {
+  animation-delay: 200ms;
+}
+
+.anim-card-4 {
+  animation-delay: 250ms;
+}
+
+.anim-card-5 {
+  animation-delay: 300ms;
+}
+
+.anim-card-6 {
+  animation-delay: 350ms;
+}
+
+.anim-card-7 {
+  animation-delay: 400ms;
+}
+
+.anim-card-8 {
+  animation-delay: 450ms;
+}
+
+.anim-card-9 {
+  animation-delay: 500ms;
+}
+
+.anim-card-10 {
+  animation-delay: 550ms;
 }
 
 footer {
