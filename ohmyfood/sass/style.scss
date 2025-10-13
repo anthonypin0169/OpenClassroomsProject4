@@ -83,7 +83,10 @@ header{
 //Reservation-section 
 
 .reservation-section{
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    justify-content: center;
     background: $light-grey;
     padding: 39px 0 57px 0;
     &__title{
@@ -94,8 +97,13 @@ header{
         margin: 0 26px 27px 34px;
     }
     &__btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
         @include order-explore-btn;
         color: #FFFFFF;
+        text-decoration: none;
         width: 218px;
         cursor: pointer;
         transition: opacity 350ms ease-in;
