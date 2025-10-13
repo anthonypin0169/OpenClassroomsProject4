@@ -120,7 +120,7 @@ header{
                     &:hover{
                         opacity: 0.8;
                     }   
-                }
+            }
         }
         .menu__title{
             height: 27px;
@@ -190,7 +190,7 @@ header{
             transform: translateX(-59px);
         }    
     }       
-    animation: slide 500ms forwards cubic-bezier(.71,.35,.68,.56);       
+    animation: slide 400ms forwards cubic-bezier(.71,.35,.68,.56);       
 }
 @keyframes slide {
     from{
@@ -207,7 +207,7 @@ header{
     animation-delay: 400ms;
 }
 .anim-card-3{
-    animation-delay: 700ms;    
+    animation-delay: 700ms;   
 }
 .anim-card-4{
     animation-delay: 1000ms;
@@ -222,13 +222,13 @@ header{
     animation-delay: 1900ms;
 }
 .anim-card-8{
-    animation-delay: 2200ms;
+    animation-delay: 2200ms;    
 }
 .anim-card-9{
-    animation-delay: 2500ms;    
+    animation-delay: 2500ms;
 }
 .anim-card-10{
-    animation-delay: 2800ms;
+    animation-delay: 2900ms;
 }
 
 

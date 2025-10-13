@@ -120,7 +120,7 @@ header .header__back-btn {
   opacity: 0;
   transition: padding-right 400ms ease-in-out;
   gap: 15px;
-  animation: slide 500ms forwards cubic-bezier(0.71, 0.35, 0.68, 0.56);
+  animation: slide 400ms forwards cubic-bezier(0.71, 0.35, 0.68, 0.56);
 }
 .card-menu__content {
   margin-left: 12px;
@@ -206,7 +206,7 @@ header .header__back-btn {
 }
 
 .anim-card-10 {
-  animation-delay: 2800ms;
+  animation-delay: 2900ms;
 }
 
 footer {
